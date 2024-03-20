@@ -334,7 +334,7 @@ if __name__ == "__main__":
     parser.add_argument('--dataroot', type=str, default='./data')                     # nuscene数据集路径,最好是在这个工具箱内有个原始数据集的软链接路径, 使用相对路径
     parser.add_argument('--version', type=str, default='v1.0-trainval')               # nuscenes_devite的参数, 可选参数: v1.0-trainval v1.0-mini  v1.0-test
     parser.add_argument('--config_path', type=str, default='')                        # nuscenes的评测配置文件, 默认路径为/nuscenes/eval/tracking/configs/tracking_nips_2019.json, 是一些参数(包含距离阈值, 评测指标的默认值, 评测距离等)
-    parser.add_argument('--render_curves', type=int, default=0)                       # 控制是否输出评测指标的曲线
+    parser.add_argument('--render_curves', type=int, default=1)                       # 控制是否输出评测指标的曲线
     parser.add_argument('--verbose', type=int, default=1)                             # 是否运行的时候在终端打印结果
     parser.add_argument('--render_classes', type=str, default='', nargs='+', help='For which classes we render tracking results to disk.')  # 绘制某个类别的2D图,每个场景一个文件夹，可以动态看出物体的移动
     parser.add_argument("--min_dist",type=float, default=0.0)                          # 参与评测的物体距离自车的最近距离, 正方形的区域, 单独计算纵向距离和横向距离
